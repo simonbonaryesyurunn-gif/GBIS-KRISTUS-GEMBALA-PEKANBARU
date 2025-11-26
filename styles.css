@@ -1,0 +1,38 @@
+/* Simple responsive styles for church website */
+:root{
+  --brand:#346699;
+  --muted:#666;
+  --card-bg:#fff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:#f4f6f8; color:#222; line-height:1.5}
+.wrap{max-width:1000px; margin:0 auto; padding:16px}
+.site-header{background:var(--brand); color:white; padding:28px 0; text-align:center}
+.site-header h1{margin:0;font-size:1.6rem;letter-spacing:0.6px}
+.tagline{margin:6px 0 0; opacity:0.95}
+.site-nav{display:flex; gap:12px; justify-content:center; background:#fff; border-bottom:1px solid #e6e9ee; position:sticky; top:0; z-index:10; padding:10px 16px}
+.site-nav a{text-decoration:none; color:#123; padding:6px 10px; border-radius:6px}
+.site-nav a:hover{background:#f0f4fa}
+.card{background:var(--card-bg); border-radius:10px; padding:18px; margin:18px 0; box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.schedule{width:100%; border-collapse:collapse}
+.schedule th, .schedule td{padding:8px 10px; border-bottom:1px solid #eef2f7; text-align:left}
+.announcements{list-style:disc; padding-left:20px}
+.small-form{display:flex; gap:8px; margin-top:12px}
+.small-form input{flex:1; padding:8px; border:1px solid #d7dfee; border-radius:6px}
+.small-form button{padding:8px 12px; border:none; background:var(--brand); color:white; border-radius:6px; cursor:pointer}
+.muted{color:var(--muted); font-size:0.9rem}
+.gallery{display:flex; gap:12px; flex-wrap:wrap}
+.gallery img{width:150px; height:100px; object-fit:cover; border-radius:8px; cursor:pointer; box-shadow:0 2px 6px rgba(2,6,23,0.08)}
+.site-footer{background:#111; color:#ddd; padding:14px 0; text-align:center; margin-top:30px}
+
+/* Modal */
+.modal{display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; padding:20px}
+.modal[aria-hidden="false"]{display:flex}
+.modal img{max-width:90%; max-height:70vh; border-radius:8px}
+.modal-close{position:absolute; top:18px; right:18px; font-size:28px; background:transparent; border:none; color:white; cursor:pointer}
+
+/* Responsive */
+@media(max-width:640px){
+  .gallery img{width:48%; height:120px}
+  .site-nav{overflow:auto}
+}

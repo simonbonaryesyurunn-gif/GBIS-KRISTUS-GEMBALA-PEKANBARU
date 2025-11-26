@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GBIS KRISTUS GEMBALA PEKANBARU</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>GBIS KRISTUS GEMBALA</h1>
+      <p class="tagline">Selalu Ada Tempat bagi Semua Orang</p>
+    </div>
+  </header>
+
+  <nav class="site-nav wrap">
+    <a href="#beranda">Beranda</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#pengumuman">Pengumuman</a>
+    <a href="#kalender">Kalender</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <main class="wrap">
+    <section id="beranda" class="card">
+      <h2>Selamat Datang</h2>
+      <p>Website ini dirancang untuk memudahkan jemaat dalam mengakses informasi gereja, mengikuti kegiatan, dan bertumbuh secara rohani.</p>
+    </section>
+
+    <section id="kegiatan" class="card">
+      <h2>Kegiatan Gereja & Jadwal Ibadah</h2>
+      <table class="schedule">
+        <thead><tr><th>Hari</th><th>Kegiatan</th><th>Waktu</th></tr></thead>
+        <tbody id="jadwal-body">
+          <!-- Diisi oleh JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pengumuman" class="card">
+      <h2>Pengumuman</h2>
+      <ul id="pengumuman-list" class="announcements">
+        <!-- Diisi oleh JS -->
+      </ul>
+      <form id="announce-form" class="small-form" aria-label="Tambah pengumuman (untuk demo)">
+        <input type="text" id="announce-input" placeholder="Tulis pengumuman baru..." />
+        <button type="submit">Tambah (Demo)</button>
+      </form>
+      <p class="muted">*Form demo akan menambahkan pengumuman secara lokal (tidak tersimpan di server).</p>
+    </section>
+
+    <section id="kalender" class="card">
+      <h2>Kalender Kegiatan</h2>
+      <div id="calendar"></div>
+      <div id="event-list"></div>
+    </section>
+
+    <section id="galeri" class="card">
+      <h2>Galeri Foto</h2>
+      <div class="gallery" id="gallery">
+        <img src="images/photo1.jpg" alt="Kegiatan 1" tabindex="0">
+        <img src="images/photo2.jpg" alt="Kegiatan 2" tabindex="0">
+        <img src="images/photo3.jpg" alt="Kegiatan 3" tabindex="0">
+      </div>
+    </section>
+
+    <section id="kontak" class="card">
+      <h2>Kontak</h2>
+      <p>Alamat: Jl. Sekolah Gg. Sekolah II, Limbungan Baru, Rumbai Pesisir, Pekanbaru, Riau 28266</p>
+      <p>Email: gbiskristusgembala@gmail.com</p>
+      <p>Telepon: 0812-3456-7890</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>&copy; 2025 GBIS KRISTUS GEMBALA PEKANBARU</small>
+    </div>
+  </footer>
+
+  <!-- Modal for gallery -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <button id="modal-close" class="modal-close" aria-label="Tutup">&times;</button>
+    <img id="modal-img" alt="">
+    <p id="modal-caption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
